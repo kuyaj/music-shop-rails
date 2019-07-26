@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  resources :instruments
   devise_for :users, controllers: {
     registrations: 'registrations'
   }
   authenticated :user do 
-    root 'store#index'
+    root 'instruments#index'
   end
   
   root to: redirect("/users/sign_in")

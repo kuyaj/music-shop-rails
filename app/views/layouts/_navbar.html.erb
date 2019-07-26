@@ -10,28 +10,14 @@
           <h1 class="title is-6 has-text-white"> Home </h1>
        <%  end %>
     <% end %>
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
 
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <%# <%= link_to root_path, class: "navbar-item" do %>
-          <%# <span class="title is-6 has-text-white"> Home </span >
-      <% end %> 
-      </div>
-    </div>
-    <div class="navbar-end">
-  
      <% if user_signed_in? %>
       <div class="navbar-item has-dropdown is-hoverable ">
         <a class="navbar-link">
           More
         </a>
         <div class="navbar-dropdown">
+          <%= link_to "New instrument", new_instrument_path, class: "navbar-item"%>
           <a class="navbar-item"> Profile </a>
           <a class="navbar-item"> Setting </a>
           <hr class="navbar-divider">
@@ -39,11 +25,19 @@
         </div>
         </div>
         <% end %> 
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+    <div class="navbar-end">
        <% if  !user_signed_in? %>
         <div class="navbar-item">
           <div class="buttons">
+            <%= link_to 'Sign in', new_user_session_path, class: "button is-light is-outlined" %>
              <%= link_to 'Sign up', new_user_registration_path, class: "button is-light" %>
-             <%= link_to 'Login', new_user_session_path, class: "button is-light" %>
             </div>
           </div>
           <% end %>
