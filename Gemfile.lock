@@ -275,6 +275,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   coffee-script-source (= 1.8.0)
   devise (~> 4.4)
+  eventmachine
   gravatar_image_tag
   guard (~> 2.14.1, >= 2.14.1)
   guard-livereload (~> 2.5, >= 2.5.2)
