@@ -24,6 +24,9 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
+#install eventmachine gem for windows compatibility issues
+gem 'eventmachine'
+
 gem 'bulma-rails'
 gem 'simple_form'
 gem 'devise', '~> 4.4'
