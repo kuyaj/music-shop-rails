@@ -1,10 +1,21 @@
-
-
 <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <div class="navbar-item">
        <h1 class="title is-6 "> Music Shop </h1>
     </div>
+
+    <div class="navbar-item">
+    <% if cart_has_items %>
+      <%= link_to cart_path(@cart), class:"button is-warning" do %>
+      
+        <span>
+          Cart
+          <%= cart_count_over_one %>
+        </span>
+      <% end %>
+    <% end %>
+    </div>
+
     <% if user_signed_in? %>
         <%= link_to root_path, class: "navbar-item" do %>
           <h1 class="title is-6"> Home </h1>
