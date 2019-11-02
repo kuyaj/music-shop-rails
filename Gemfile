@@ -29,7 +29,7 @@ gem 'eventmachine'
 
 gem 'bulma-rails'
 gem 'simple_form'
-gem 'devise', '~> 4.4'
+gem 'devise', '~> 4.7'
 gem 'gravatar_image_tag'
 gem 'carrierwave'
 gem 'mini_magick'
